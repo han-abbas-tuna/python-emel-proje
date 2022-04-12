@@ -1,1 +1,1 @@
-# python-emel-proje
+# python-temel-proje 
