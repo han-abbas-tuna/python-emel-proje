@@ -1,0 +1,36 @@
+# 1- Bir listeyi düzleştiren (flatten) fonksiyon yazın.
+
+l = [[1, 'a', ['cat'], 2], 10, 20]
+
+bosliste = []
+
+def f(x):
+    
+    for i in x:
+        
+        if type(i) == list:
+            f(i)
+        else:
+            bosliste.append(i)
+            
+f(l)
+print(bosliste)
+
+# Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın. 
+
+l = [[1, 2], [3, 4], [5, 6, 7]]
+
+l1 = []
+
+def ters(x):
+    x.reverse()
+    for i in x:
+        
+        if type(i) == list:
+            i.reverse()
+            l1.append(i)       
+        else:
+            ters(i)
+
+ters(l)
+print(l1)
